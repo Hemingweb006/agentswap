@@ -29,7 +29,7 @@ or try again at Aug 28th, 2026 8:51 PM.
 Three weeks. Or one keystroke.
 
 <p align="center">
-  <img src="docs/demo.png" alt="agentswap carrying a session from Codex into Antigravity after a usage limit" width="820">
+  <img src="demo.png" alt="agentswap carrying a session from Codex into Antigravity after a usage limit" width="820">
 </p>
 
 ## Install
