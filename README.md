@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/banner.png" alt="agentswap" width="720">
+  <img src="banner.png" alt="agentswap" width="720">
 </p>
 
 <h3 align="center">Move a coding-agent session between tools without re-explaining your project.</h3>
