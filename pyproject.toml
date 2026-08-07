@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentswap"
+version = "0.1.0"
+description = "Move a coding-agent session between tools without re-explaining your project."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Abdellatif" }]
+keywords = [
+    "claude-code",
+    "codex",
+    "coding-agent",
+    "session",
+    "context",
+    "handoff",
+    "llm",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Build Tools",
+]
+
+# Deliberately empty. A tool whose premise is "you just ran out of credits"
+# should install and run with nothing but a Python interpreter.
+dependencies = []
+
+[project.optional-dependencies]
+# Only needed to read cold Codex rollouts, which get compressed to .jsonl.zst.
+zstd = ["zstandard>=0.22"]
+dev = ["pytest>=8.0", "zstandard>=0.22"]
+
+[project.urls]
+Homepage = "https://github.com/hemingweb006/agentswap"
+Repository = "https://github.com/hemingweb006/agentswap"
+Issues = "https://github.com/hemingweb006/agentswap/issues"
+
+[project.scripts]
+agentswap = "agentswap.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["agentswap"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

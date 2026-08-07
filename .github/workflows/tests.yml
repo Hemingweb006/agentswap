@@ -1,0 +1,37 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # macOS matters most -- it is where the path quirks live -- but the
+        # readers must not assume a platform, so Linux runs too.
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install
+        run: pip install -e '.[dev]'
+
+      - name: Test
+        run: pytest -q
+
+      - name: Smoke test the CLI
+        run: |
+          python -m agentswap --help
+          python -m agentswap agents
+          python -m agentswap inspect tests/fixtures/rollout-real-shape.jsonl --probe
