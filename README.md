@@ -209,19 +209,6 @@ That output is a bug report. If you see a non-empty list, please open an issue w
 it — that exact one led to matching every hosted tool call by suffix rather than
 enumerating them.
 
-## What is not verified
-
-Be suspicious of this section's absence in other tools.
-
-- **`codex resume` cannot load a written rollout file**, by design — see above. Codex
-  and Antigravity are prompt-delivery only.
-- **Antigravity's log schema is inferred**, not read from source. It launches
-  correctly with carried context, but if `--probe` reports unknown shapes on your
-  conversations, the adapter is missing something.
-- **The brief tells the agent to check `git diff`** rather than running it. Turning
-  that claim into a verified fact is the next feature.
-- **Windsurf, Cursor and Copilot CLI are unsupported.** Four solid adapters beat
-  eight broken ones; every adapter is permanent maintenance against a moving target.
 
 ## Contributing
 
