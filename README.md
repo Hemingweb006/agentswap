@@ -5,7 +5,7 @@
 <h3 align="center">Move a coding-agent session between tools without re-explaining your project.</h3>
 
 <p align="center">
-  <a href="https://pypi.org/project/agentswap/"><img alt="PyPI" src="https://img.shields.io/pypi/v/agentswap?color=2dd4a7&labelColor=1f2430"></a>
+  <a href="https://pypi.org/project/agentswap/"><img alt="PyPI" src="https://img.shields.io/pypi/v/agentswap?color=2dd4a7?cacheSeconds=300&labelColor=1f2430"></a>
   <a href="https://pypi.org/project/agentswap/"><img alt="Python" src="https://img.shields.io/pypi/pyversions/agentswap?cacheSeconds=300&color=2dd4a7&labelColor=1f2430"></a>
   <a href="https://github.com/hemingweb006/agentswap/actions/workflows/tests.yml"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/hemingweb006/agentswap/tests.yml?label=tests&color=2dd4a7&labelColor=1f2430"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2dd4a7?labelColor=1f2430"></a>
